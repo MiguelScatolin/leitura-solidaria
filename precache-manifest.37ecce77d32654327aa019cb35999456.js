@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9c5a10b79830e444a022054a578bd858",
+    "revision": "bba7b22fd606801c85316bd3a7faf46d",
     "url": "/leitura-solidaria/index.html"
   },
   {
-    "revision": "fc7e26bfbc5954e94ae5",
+    "revision": "4ae44c55709f5e2b802f",
     "url": "/leitura-solidaria/static/css/main.76fe27f7.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/leitura-solidaria/static/js/3.5592a1e6.chunk.js"
   },
   {
-    "revision": "fc7e26bfbc5954e94ae5",
-    "url": "/leitura-solidaria/static/js/main.5f0c3d46.chunk.js"
+    "revision": "4ae44c55709f5e2b802f",
+    "url": "/leitura-solidaria/static/js/main.9540258c.chunk.js"
   },
   {
     "revision": "e242e0c5713c4ef84c41",

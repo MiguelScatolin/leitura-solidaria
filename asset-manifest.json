@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/leitura-solidaria/static/css/main.76fe27f7.chunk.css",
-    "main.js": "/leitura-solidaria/static/js/main.5f0c3d46.chunk.js",
-    "main.js.map": "/leitura-solidaria/static/js/main.5f0c3d46.chunk.js.map",
+    "main.js": "/leitura-solidaria/static/js/main.9540258c.chunk.js",
+    "main.js.map": "/leitura-solidaria/static/js/main.9540258c.chunk.js.map",
     "runtime-main.js": "/leitura-solidaria/static/js/runtime-main.3cb4b114.js",
     "runtime-main.js.map": "/leitura-solidaria/static/js/runtime-main.3cb4b114.js.map",
     "static/js/2.5d60cc76.chunk.js": "/leitura-solidaria/static/js/2.5d60cc76.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.5592a1e6.chunk.js": "/leitura-solidaria/static/js/3.5592a1e6.chunk.js",
     "static/js/3.5592a1e6.chunk.js.map": "/leitura-solidaria/static/js/3.5592a1e6.chunk.js.map",
     "index.html": "/leitura-solidaria/index.html",
-    "precache-manifest.bf78184b3d9620bcc5025467fd1b1ec9.js": "/leitura-solidaria/precache-manifest.bf78184b3d9620bcc5025467fd1b1ec9.js",
+    "precache-manifest.37ecce77d32654327aa019cb35999456.js": "/leitura-solidaria/precache-manifest.37ecce77d32654327aa019cb35999456.js",
     "service-worker.js": "/leitura-solidaria/service-worker.js",
     "static/css/main.76fe27f7.chunk.css.map": "/leitura-solidaria/static/css/main.76fe27f7.chunk.css.map",
     "static/js/2.5d60cc76.chunk.js.LICENSE.txt": "/leitura-solidaria/static/js/2.5d60cc76.chunk.js.LICENSE.txt"
@@ -19,6 +19,6 @@
     "static/js/runtime-main.3cb4b114.js",
     "static/js/2.5d60cc76.chunk.js",
     "static/css/main.76fe27f7.chunk.css",
-    "static/js/main.5f0c3d46.chunk.js"
+    "static/js/main.9540258c.chunk.js"
   ]
 }
