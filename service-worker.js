@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/leitura-solidaria/precache-manifest.928222901447ed8d7a65847c8fffffbf.js"
+  "/leitura-solidaria/precache-manifest.29d7a5289b8ccbe2c7c24c18408c104e.js"
 );
 
 self.addEventListener('message', (event) => {

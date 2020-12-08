@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/leitura-solidaria/static/css/main.02ed95fd.chunk.css",
-    "main.js": "/leitura-solidaria/static/js/main.1a0852d7.chunk.js",
-    "main.js.map": "/leitura-solidaria/static/js/main.1a0852d7.chunk.js.map",
-    "runtime-main.js": "/leitura-solidaria/static/js/runtime-main.4dc47119.js",
-    "runtime-main.js.map": "/leitura-solidaria/static/js/runtime-main.4dc47119.js.map",
-    "static/js/2.cba85ccf.chunk.js": "/leitura-solidaria/static/js/2.cba85ccf.chunk.js",
-    "static/js/2.cba85ccf.chunk.js.map": "/leitura-solidaria/static/js/2.cba85ccf.chunk.js.map",
-    "static/js/3.38c55d1d.chunk.js": "/leitura-solidaria/static/js/3.38c55d1d.chunk.js",
-    "static/js/3.38c55d1d.chunk.js.map": "/leitura-solidaria/static/js/3.38c55d1d.chunk.js.map",
+    "main.js": "/leitura-solidaria/static/js/main.1c038395.chunk.js",
+    "main.js.map": "/leitura-solidaria/static/js/main.1c038395.chunk.js.map",
+    "runtime-main.js": "/leitura-solidaria/static/js/runtime-main.a9ab6362.js",
+    "runtime-main.js.map": "/leitura-solidaria/static/js/runtime-main.a9ab6362.js.map",
+    "static/js/2.b3c53466.chunk.js": "/leitura-solidaria/static/js/2.b3c53466.chunk.js",
+    "static/js/2.b3c53466.chunk.js.map": "/leitura-solidaria/static/js/2.b3c53466.chunk.js.map",
+    "static/js/3.49be121e.chunk.js": "/leitura-solidaria/static/js/3.49be121e.chunk.js",
+    "static/js/3.49be121e.chunk.js.map": "/leitura-solidaria/static/js/3.49be121e.chunk.js.map",
     "index.html": "/leitura-solidaria/index.html",
-    "precache-manifest.928222901447ed8d7a65847c8fffffbf.js": "/leitura-solidaria/precache-manifest.928222901447ed8d7a65847c8fffffbf.js",
+    "precache-manifest.29d7a5289b8ccbe2c7c24c18408c104e.js": "/leitura-solidaria/precache-manifest.29d7a5289b8ccbe2c7c24c18408c104e.js",
     "service-worker.js": "/leitura-solidaria/service-worker.js",
     "static/css/main.02ed95fd.chunk.css.map": "/leitura-solidaria/static/css/main.02ed95fd.chunk.css.map",
-    "static/js/2.cba85ccf.chunk.js.LICENSE.txt": "/leitura-solidaria/static/js/2.cba85ccf.chunk.js.LICENSE.txt"
+    "static/js/2.b3c53466.chunk.js.LICENSE.txt": "/leitura-solidaria/static/js/2.b3c53466.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4dc47119.js",
-    "static/js/2.cba85ccf.chunk.js",
+    "static/js/runtime-main.a9ab6362.js",
+    "static/js/2.b3c53466.chunk.js",
     "static/css/main.02ed95fd.chunk.css",
-    "static/js/main.1a0852d7.chunk.js"
+    "static/js/main.1c038395.chunk.js"
   ]
 }
