@@ -1,4 +1,12 @@
-import { Button, Grid, MenuItem, Paper, TextField } from "@material-ui/core";
+import {
+    Button,
+    Checkbox,
+    FormControlLabel,
+    Grid,
+    MenuItem,
+    Paper,
+    TextField,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React, { ChangeEvent, useState } from "react";
 import { Text, TextType } from "../types";
@@ -32,15 +40,16 @@ const TextForm = () => {
         hasImages: false,
     });
 
-    const updateText = (
-        event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
-    ) => {
-        setText({ ...text, [event.target.name]: event.target.value });
+    const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
+        updateText(event.target.name, event.target.value);
+    };
+
+    const updateText = (property: string, value: string | number | boolean) => {
+        setText({ ...text, [property]: value });
     };
 
     const handleRegisterText = async () => {
         const result = await registerText(text);
-        console.log(result);
     };
 
     return (
@@ -66,7 +75,7 @@ const TextForm = () => {
                                 label="Nome"
                                 aria-label="Nome do texto"
                                 variant="outlined"
-                                onChange={updateText}
+                                onChange={handleChange}
                                 value={text.name}
                             />
                         </Grid>
@@ -80,7 +89,7 @@ const TextForm = () => {
                                 label="Autores"
                                 aria-label="Nome dos Autores"
                                 variant="outlined"
-                                onChange={updateText}
+                                onChange={handleChange}
                                 value={text.authors}
                             />
                         </Grid>
@@ -97,7 +106,7 @@ const TextForm = () => {
                                 label="Edição"
                                 aria-label="Edição"
                                 variant="outlined"
-                                onChange={updateText}
+                                onChange={handleChange}
                                 value={text.edition}
                             />
                         </Grid>
@@ -111,7 +120,7 @@ const TextForm = () => {
                                 select
                                 variant="outlined"
                                 aria-label="Língua do texto"
-                                onChange={updateText}
+                                onChange={handleChange}
                                 fullWidth
                                 value={text.language}
                             >
@@ -130,7 +139,7 @@ const TextForm = () => {
                                 aria-label="Tipo do texto"
                                 variant="outlined"
                                 fullWidth
-                                onChange={updateText}
+                                onChange={handleChange}
                                 value={text.type}
                             >
                                 <MenuItem value={TextType.Academic}>
@@ -142,7 +151,23 @@ const TextForm = () => {
                             </TextField>
                         </Grid>
                     </Grid>
-                    <Grid item container justify="flex-end">
+                    <Grid item container justify="space-between">
+                        <FormControlLabel
+                            control={
+                                <Checkbox
+                                    checked={text.hasImages}
+                                    onChange={(event) =>
+                                        updateText(
+                                            event.target.name,
+                                            event.target.checked
+                                        )
+                                    }
+                                    name="hasImages"
+                                    color="primary"
+                                />
+                            }
+                            label="Tem imagens"
+                        />
                         <Button
                             color="primary"
                             variant="contained"
