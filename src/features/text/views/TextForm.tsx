@@ -1,78 +1,159 @@
-import { Grid, MenuItem, Paper, TextField } from "@material-ui/core";
+import { Button, Grid, MenuItem, Paper, TextField } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import React from "react";
+import React, { ChangeEvent, useState } from "react";
+import { Text, TextType } from "../types";
+import { registerText } from "../manager";
 
 const useStyles = makeStyles({
     root: {
-        height: "100vh",
-        width: "100vw",
+        height: "100%",
+        width: "100%",
+        padding: 32,
+    },
+    grid: {
+        height: "100%",
+    },
+    page: {
+        display: "grid",
+        placeItems: "center",
+        padding: "10% 20%",
     },
 });
 
 const TextForm = () => {
     const classes = useStyles();
-    /* name: string;
-    authors: string[];
-    edition?: number;
-    language: string;
-    type: TextType;
-    hasImages: boolean; */
+    const [text, setText] = useState<Text>({
+        guid: 0,
+        name: "",
+        authors: [],
+        edition: 0,
+        language: "",
+        type: TextType.Academic,
+        hasImages: false,
+    });
+
+    const updateText = (
+        event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+    ) => {
+        setText({ ...text, [event.target.name]: event.target.value });
+    };
+
+    const handleRegisterText = async () => {
+        const result = await registerText(text);
+        console.log(result);
+    };
+
     return (
-        <Paper className={classes.root}>
-            <Grid container direction="column" xs={12}>
-                Formulário de cadastro de texto
-                <Grid item>
-                    <TextField
-                        id="outlined-basic"
-                        label="Nome"
-                        aria-label="Nome do texto"
-                        variant="outlined"
-                    />
+        <div className={classes.page}>
+            <Paper className={classes.root}>
+                <Grid
+                    className={classes.grid}
+                    container
+                    direction="column"
+                    alignItems="center"
+                    justify="space-between"
+                    spacing={2}
+                >
+                    <Grid item>Formulário de cadastro de texto</Grid>
+                    <Grid container justify="space-between" item spacing={2}>
+                        <Grid item xs={6}>
+                            <TextField
+                                color="primary"
+                                size="small"
+                                name="name"
+                                fullWidth
+                                id="outlined-basic"
+                                label="Nome"
+                                aria-label="Nome do texto"
+                                variant="outlined"
+                                onChange={updateText}
+                                value={text.name}
+                            />
+                        </Grid>
+                        <Grid item xs={6}>
+                            <TextField
+                                color="primary"
+                                name="authors"
+                                size="small"
+                                id="outlined-basic"
+                                fullWidth
+                                label="Autores"
+                                aria-label="Nome dos Autores"
+                                variant="outlined"
+                                onChange={updateText}
+                                value={text.authors}
+                            />
+                        </Grid>
+                    </Grid>
+                    <Grid container justify="space-between" item spacing={2}>
+                        <Grid item xs={4}>
+                            <TextField
+                                color="primary"
+                                size="small"
+                                name="edition"
+                                fullWidth
+                                type="number"
+                                id="outlined-basic"
+                                label="Edição"
+                                aria-label="Edição"
+                                variant="outlined"
+                                onChange={updateText}
+                                value={text.edition}
+                            />
+                        </Grid>
+                        <Grid item xs={4}>
+                            <TextField
+                                color="primary"
+                                size="small"
+                                id="lingua"
+                                name="language"
+                                label="Língua"
+                                select
+                                variant="outlined"
+                                aria-label="Língua do texto"
+                                onChange={updateText}
+                                fullWidth
+                                value={text.language}
+                            >
+                                <MenuItem value="portugues10">Ten</MenuItem>
+                                <MenuItem value="ingles">Inglês</MenuItem>
+                            </TextField>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <TextField
+                                color="primary"
+                                size="small"
+                                id="tipo"
+                                name="type"
+                                label="Tipo"
+                                select
+                                aria-label="Tipo do texto"
+                                variant="outlined"
+                                fullWidth
+                                onChange={updateText}
+                                value={text.type}
+                            >
+                                <MenuItem value={TextType.Academic}>
+                                    Academico
+                                </MenuItem>
+                                <MenuItem value={TextType.Literature}>
+                                    Literatura
+                                </MenuItem>
+                            </TextField>
+                        </Grid>
+                    </Grid>
+                    <Grid item container justify="flex-end">
+                        <Button
+                            color="primary"
+                            variant="contained"
+                            onClick={handleRegisterText}
+                        >
+                            Salvar
+                        </Button>
+                    </Grid>
                 </Grid>
-                <Grid item>
-                    <TextField
-                        id="outlined-basic"
-                        label="Autores"
-                        aria-label="Nome dos Autores"
-                        variant="outlined"
-                    />
-                </Grid>
-                <Grid item>
-                    <TextField
-                        id="outlined-basic"
-                        label="Autores"
-                        aria-label="Nome dos Autores"
-                        variant="outlined"
-                    />
-                </Grid>
-                <Grid item>
-                    <TextField
-                        id="lingua"
-                        label="Língua"
-                        value="20"
-                        select
-                        variant="outlined"
-                        aria-label="Língua do texto"
-                    >
-                        <MenuItem value="portugues10">Ten</MenuItem>
-                        <MenuItem value="ingles">Inglês</MenuItem>
-                    </TextField>
-                </Grid>
-                <Grid item>
-                    <TextField
-                        id="tipo"
-                        label="Tipo"
-                        value="20"
-                        select
-                        aria-label="Tipo do texto"
-                        variant="outlined"
-                    >
-                        <MenuItem value="Literatura">Literatura</MenuItem>
-                        <MenuItem value="artigo">Artigo</MenuItem>
-                    </TextField>
-                </Grid>
-            </Grid>
-        </Paper>
+            </Paper>
+        </div>
     );
 };
 
