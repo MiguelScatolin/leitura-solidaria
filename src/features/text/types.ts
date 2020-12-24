@@ -5,7 +5,7 @@ export enum TextType {
 
 export interface Text {
     guid: number;
-    name: string;
+    title: string;
     authors: string[];
     edition?: number;
     language: string;

@@ -30,9 +30,10 @@ const useStyles = makeStyles({
 
 const TextForm = () => {
     const classes = useStyles();
+    const [file, setFile] = useState<Blob | null>(null);
     const [text, setText] = useState<Text>({
         guid: 0,
-        name: "",
+        title: "",
         authors: [],
         edition: 0,
         language: "",
@@ -49,7 +50,9 @@ const TextForm = () => {
     };
 
     const handleRegisterText = async () => {
-        const result = await registerText(text);
+        if(file) {
+            const result = await registerText(text, file);
+        }
     };
 
     return (
@@ -69,14 +72,14 @@ const TextForm = () => {
                             <TextField
                                 color="primary"
                                 size="small"
-                                name="name"
+                                name="title"
                                 fullWidth
                                 id="outlined-basic"
-                                label="Nome"
+                                label="Titulo"
                                 aria-label="Nome do texto"
                                 variant="outlined"
                                 onChange={handleChange}
-                                value={text.name}
+                                value={text.title}
                             />
                         </Grid>
                         <Grid item xs={6}>
@@ -151,7 +154,8 @@ const TextForm = () => {
                             </TextField>
                         </Grid>
                     </Grid>
-                    <Grid item container justify="space-between">
+                    <Grid item container justify="space-between" alignItems="center">
+                        <input type="file" onChange={(e?: React.ChangeEvent<HTMLInputElement>) => setFile(e.target.files[0])} />
                         <FormControlLabel
                             control={
                                 <Checkbox
@@ -168,6 +172,8 @@ const TextForm = () => {
                             }
                             label="Tem imagens"
                         />
+                    </Grid>
+                    <Grid item container justify="flex-end">
                         <Button
                             color="primary"
                             variant="contained"
