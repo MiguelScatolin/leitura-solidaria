@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/leitura-solidaria/static/css/main.02ed95fd.chunk.css",
-    "main.js": "/leitura-solidaria/static/js/main.355e66c5.chunk.js",
-    "main.js.map": "/leitura-solidaria/static/js/main.355e66c5.chunk.js.map",
+    "main.js": "/leitura-solidaria/static/js/main.00fec453.chunk.js",
+    "main.js.map": "/leitura-solidaria/static/js/main.00fec453.chunk.js.map",
     "runtime-main.js": "/leitura-solidaria/static/js/runtime-main.3b30623c.js",
     "runtime-main.js.map": "/leitura-solidaria/static/js/runtime-main.3b30623c.js.map",
-    "static/js/2.9d6ee694.chunk.js": "/leitura-solidaria/static/js/2.9d6ee694.chunk.js",
-    "static/js/2.9d6ee694.chunk.js.map": "/leitura-solidaria/static/js/2.9d6ee694.chunk.js.map",
+    "static/js/2.c7918849.chunk.js": "/leitura-solidaria/static/js/2.c7918849.chunk.js",
+    "static/js/2.c7918849.chunk.js.map": "/leitura-solidaria/static/js/2.c7918849.chunk.js.map",
     "static/js/3.8fa21707.chunk.js": "/leitura-solidaria/static/js/3.8fa21707.chunk.js",
     "static/js/3.8fa21707.chunk.js.map": "/leitura-solidaria/static/js/3.8fa21707.chunk.js.map",
     "index.html": "/leitura-solidaria/index.html",
-    "precache-manifest.2163c36e40cfaaba51cd7390b66b3fb5.js": "/leitura-solidaria/precache-manifest.2163c36e40cfaaba51cd7390b66b3fb5.js",
+    "precache-manifest.490a1675a8d0b2495c83308ee211b20a.js": "/leitura-solidaria/precache-manifest.490a1675a8d0b2495c83308ee211b20a.js",
     "service-worker.js": "/leitura-solidaria/service-worker.js",
     "static/css/main.02ed95fd.chunk.css.map": "/leitura-solidaria/static/css/main.02ed95fd.chunk.css.map",
-    "static/js/2.9d6ee694.chunk.js.LICENSE.txt": "/leitura-solidaria/static/js/2.9d6ee694.chunk.js.LICENSE.txt"
+    "static/js/2.c7918849.chunk.js.LICENSE.txt": "/leitura-solidaria/static/js/2.c7918849.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3b30623c.js",
-    "static/js/2.9d6ee694.chunk.js",
+    "static/js/2.c7918849.chunk.js",
     "static/css/main.02ed95fd.chunk.css",
-    "static/js/main.355e66c5.chunk.js"
+    "static/js/main.00fec453.chunk.js"
   ]
 }
